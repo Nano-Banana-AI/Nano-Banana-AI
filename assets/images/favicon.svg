@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bananaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#bananaGradient)" />
+  
+  <!-- Simplified Banana Shape -->
+  <path d="M 20 25 Q 32 15, 44 25 Q 42 40, 32 45 Q 22 40, 20 25" 
+        fill="#FFF" 
+        opacity="0.9"/>
+  
+  <!-- AI Dot Pattern -->
+  <circle cx="26" cy="28" r="2" fill="#FFD700"/>
+  <circle cx="32" cy="26" r="2" fill="#FFD700"/>
+  <circle cx="38" cy="28" r="2" fill="#FFD700"/>
+  <circle cx="29" cy="34" r="2" fill="#FFA500"/>
+  <circle cx="35" cy="34" r="2" fill="#FFA500"/>
+</svg>

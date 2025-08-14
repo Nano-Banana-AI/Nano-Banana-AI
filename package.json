@@ -1,0 +1,28 @@
+{
+  "name": "nano-banana-ai",
+  "version": "1.0.0",
+  "description": "Nano Banana AI - Advanced AI Image Editor Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "live-server --port=8000",
+    "build": "echo 'No build process required for static site'"
+  },
+  "keywords": [
+    "AI",
+    "image-editor",
+    "natural-language",
+    "image-generation",
+    "web-app"
+  ],
+  "author": "Nano Banana AI",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nano-Banana-AI/Nano-Banana-AI.git"
+  },
+  "homepage": "https://nanobanana.ai"
+}

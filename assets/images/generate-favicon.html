@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Favicon</title>
+</head>
+<body>
+    <h1>Favicon Generator for Nano Banana AI</h1>
+    <p>Right-click the image below and save it as favicon.png</p>
+    
+    <canvas id="favicon" width="64" height="64"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('favicon');
+        const ctx = canvas.getContext('2d');
+        
+        // Create gradient
+        const gradient = ctx.createLinearGradient(0, 0, 64, 64);
+        gradient.addColorStop(0, '#FFD700');
+        gradient.addColorStop(1, '#FFA500');
+        
+        // Draw background circle
+        ctx.beginPath();
+        ctx.arc(32, 32, 30, 0, 2 * Math.PI);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+        
+        // Draw banana shape
+        ctx.beginPath();
+        ctx.moveTo(20, 30);
+        ctx.quadraticCurveTo(32, 15, 44, 30);
+        ctx.quadraticCurveTo(40, 40, 32, 42);
+        ctx.quadraticCurveTo(24, 40, 20, 30);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+        ctx.fill();
+        
+        // Draw AI dots
+        ctx.fillStyle = '#FFD700';
+        ctx.beginPath();
+        ctx.arc(26, 30, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(32, 28, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(38, 30, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.fillStyle = '#FFA500';
+        ctx.beginPath();
+        ctx.arc(29, 35, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.arc(35, 35, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        
+        // Convert to PNG and create download link
+        canvas.toBlob(function(blob) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'favicon.png';
+            a.textContent = 'Download favicon.png';
+            a.style.display = 'block';
+            a.style.marginTop = '20px';
+            document.body.appendChild(a);
+        });
+    </script>
+</body>
+</html>
